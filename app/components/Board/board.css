@@ -1,0 +1,21 @@
+.columns-container {
+  @apply absolute inset-0 flex flex-row items-start overflow-x-auto overflow-y-hidden select-none;
+  padding: 0 2rem 1rem;
+}
+
+.add-list-inline {
+  @apply flex-shrink-0 w-80 self-start mt-1 mx-2;
+}
+
+.add-list-inline .add-task {
+  @apply m-0 w-full flex justify-center items-center rounded-md py-1 px-3 space-x-2 text-lg transition text-gray-800 dark:text-gray-100 dark:bg-slate-950 bg-gray-50 hover:bg-gray-100;
+}
+
+.add-list-inline-form-wrapper {
+  @apply bg-gray-200 dark:bg-slate-900 rounded-md shadow-md p-3;
+}
+
+.add-list-inline-input {
+  @apply w-full form-input bg-white dark:bg-slate-700 border-gray-300 dark:border-gray-600 rounded-md text-sm text-gray-800 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500;
+}
+

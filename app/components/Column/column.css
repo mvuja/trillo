@@ -1,0 +1,86 @@
+.board-edit-container {
+  @apply flex justify-between w-full gap-3;
+}
+
+.board-edit-container svg {
+  @apply scale-150 text-slate-600 dark:text-slate-200 transition;
+}
+
+.editing-board-name {
+  @apply w-full form-input bg-white border-gray-300 rounded-md text-gray-600;
+}
+
+.column {
+  @apply bg-gray-200 transition rounded-md shadow-md flex flex-col relative overflow-hidden whitespace-normal dark:bg-slate-900;
+}
+
+.column-top-bar {
+  @apply w-full h-1 transition bg-slate-700 absolute inset-x-0 top-0 dark:bg-slate-600;
+}
+
+.column-title {
+  @apply p-3 flex justify-between items-center text-lg transition text-gray-600 font-semibold dark:text-gray-100 cursor-pointer;
+}
+
+.column-header {
+  @apply flex items-center gap-1.5 px-3 py-2 transition dark:text-gray-100;
+}
+
+.column-name {
+  @apply text-base font-semibold text-gray-600 dark:text-gray-100 transition truncate;
+}
+
+.column-title-area {
+  @apply flex-1 min-w-0;
+}
+
+.column-badge {
+  @apply text-xs font-bold bg-slate-300 dark:bg-slate-700 text-slate-600 dark:text-slate-200 rounded-full px-2 py-0.5 min-w-[1.4rem] text-center transition flex-shrink-0;
+}
+
+.column-action-btn {
+  @apply text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition flex-shrink-0 p-0.5 rounded;
+}
+
+.column-delete-btn {
+  @apply hover:text-red-500 dark:hover:text-red-400;
+}
+
+.column-drag-handle {
+  @apply cursor-grab text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition flex-shrink-0;
+}
+
+.column-confirm-delete {
+  @apply mx-3 mb-2 p-3 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-md;
+}
+
+.add-task {
+  width: 94%;
+  @apply flex justify-center items-center m-3 rounded-md py-1 px-3 space-x-2 text-lg transition text-gray-800 dark:text-gray-100 dark:bg-slate-950 bg-gray-50 hover:bg-gray-100;
+}
+
+.empty-state {
+  @apply flex flex-col items-center justify-center py-8 px-4 text-center opacity-50 text-gray-500 dark:text-gray-400;
+}
+
+/* Card list scroll */
+.card-list-scroll {
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.card-list-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Column enter animation */
+@keyframes columnEnter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.column-enter {
+  animation: columnEnter 0.25s ease-out;
+}
+

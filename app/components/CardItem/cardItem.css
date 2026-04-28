@@ -1,0 +1,87 @@
+.card {
+  background: none !important;
+  @apply px-3 py-2 last:pb-1;
+}
+
+.card-inner {
+  @apply bg-white rounded-md p-3 pl-6 shadow relative dark:bg-slate-700 transition-colors;
+}
+
+.card.dragging .card-inner {
+  @apply bg-gray-100 dark:bg-slate-600;
+}
+
+.card-title {
+  @apply my-3 text-base leading-5 transition dark:text-gray-200;
+}
+
+.card-trash {
+  @apply absolute bottom-2 right-2;
+}
+
+.card-edit svg {
+  @apply w-5 text-gray-700 dark:text-gray-200 transition;
+}
+
+.card-trash svg {
+  @apply w-5 text-red-700 dark:text-red-500 transition;
+}
+
+.card-label {
+  @apply bg-gradient-to-r px-2 py-1 rounded cursor-pointer text-white text-sm;
+}
+
+.priority-0 {
+  @apply from-blue-600 to-blue-400;
+}
+
+.priority-1 {
+  @apply from-green-600 to-green-400;
+}
+
+.priority-2 {
+  @apply from-red-600 to-red-400;
+}
+
+.prority-dropdown {
+  @apply inline-flex gap-3 bg-gray-200 transition p-3 rounded absolute shadow-xl top-12 left-3 invisible dark:bg-slate-900;
+}
+
+.prority-dropdown.p-visible {
+  @apply visible;
+}
+
+.prority-dropdown .card-label {
+  @apply w-6 h-6;
+}
+
+.card-due-date {
+  @apply flex items-center gap-1 text-xs text-gray-400 dark:text-gray-400 mt-1 mb-1;
+}
+
+.card-due-date.due-overdue {
+  @apply text-red-500 dark:text-red-400 font-medium;
+}
+
+.card-dimmed .card-inner {
+  @apply opacity-30;
+}
+
+.card-edit {
+  @apply absolute top-2 right-2;
+}
+
+.card-drag-handle {
+  @apply absolute top-3 left-2 opacity-50 text-gray-600 dark:text-gray-300;
+}
+
+/* Card enter animation */
+@keyframes cardEnter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.card-enter {
+  animation: cardEnter 0.18s ease-out backwards;
+}
+
